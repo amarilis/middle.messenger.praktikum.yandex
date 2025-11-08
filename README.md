@@ -8,11 +8,11 @@
 
 ###### Проект развернут на **Netlify** и его можно посмотреть по ссылкам:
 
-- «[Страница логина](ddd/login)»,
-- «[Страница регистрации](ddd/registration)»,
-- «[Страница чата](ddd/)»,
-- «[Страница профиля пользователя](ddd/errors)»,
-- «[Страница с ошибкой 404](ddd/errors)»,
+- «[Страница логина](https://practicum222.netlify.app/login.html)»,
+- «[Страница регистрации](https://practicum222.netlify.app/registration.html)»,
+- «[Страница чата](https://practicum222.netlify.app/index.html)»,
+- «[Страница профиля пользователя](https://practicum222.netlify.app/profile.html)»,
+- «[Страница с ошибкой 404](https://practicum222.netlify.app/errors.html)»,
 - «Страница с ошибкой 5\*\* такая же как и 404. Для ее отображения в шаблоне будут подставляться другие параметры»,
 
 ---
