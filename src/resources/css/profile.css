@@ -1,0 +1,92 @@
+@import url(./variables.css);
+
+/* профиль */
+.profile {
+  display: flex;
+  width: 100%;
+
+  &__back-link {
+    width: 64px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--color-grey-light);
+
+    &:hover .button-icon{
+      background-color: var(--color-blue-hover);
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    padding-top: 60px;
+    margin-bottom: 20px;
+
+    &-logo {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: var(--color-grey-light);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+
+      & .icon {
+        position: absolute;
+        margin: 0;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+      }
+    }
+
+    &-user_name {
+      margin: 21px auto 60px;
+      font-size: var(--fs16);
+      text-align: center;
+    }
+
+    &-list {
+      width: 510px;
+      padding-bottom: 60px;
+
+      &_field {
+        border-bottom: 1px solid var(--color-grey-light);
+        display: flex;
+        justify-content: space-between;
+        font-size: var(--fs13);
+        padding: 10px 0;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        & span {
+          color: var(--color-grey);
+        }
+
+        &.change-user-data,
+        &.change-user-password,
+        &.logout {
+          cursor: pointer;
+        }
+
+        &.change-user-data,
+        &.change-user-password {
+          color: var(--color-blue);
+
+          &:hover {
+            color: var(--color-blue-hover);
+          }
+        }
+
+        &.logout {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+}

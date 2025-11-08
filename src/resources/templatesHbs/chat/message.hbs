@@ -1,0 +1,79 @@
+{{!-- список возможных сообщений --}}
+
+<div class="chat__message-header">
+  <div
+    class="chat__message-header_logo"
+    style="background-image: url(https://img.buzzfeed.com/buzzfeed-static/static/2018-09/13/11/asset/buzzfeed-prod-web-05/sub-buzz-12917-1536851649-1.jpg);"
+  ></div>
+  <div class="chat__message-header_name">Aleksey</div>
+  <div class="chat__message-header_menu">
+    <em class="icon menu"></em>
+  </div>
+</div>
+<div class="chat__message-content">
+
+  <div class="chat__message-content_message date">
+    <div class="chat__message-content_message_text">19 июня</div>
+  </div>
+
+  <div class="chat__message-content_message user">
+    <div class="chat__message-content_message_text">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, ad repellat optio iste porro tempora, delectus voluptate architecto veniam, magnam officiis. Numquam laudantium deleniti modi laboriosam quidem, voluptas voluptates ipsa, assumenda earum harum nisi porro.
+      <br />
+      <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, fugiat dolorem iste quod enim illum molestias cumque voluptatum qui reprehenderit nulla magnam accusantium blanditiis earum!
+      <div class="chat__message-content_message_time text">11:56</div>
+    </div>
+
+  </div>
+
+  <div class="chat__message-content_message my">
+    <div class="chat__message-content_message_text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam libero dicta dolorum, ratione numquam doloremque. Est quod nobis sit magnam?
+      <div class="chat__message-content_message_time text">11:56</div>
+    </div>
+  </div>
+
+  <div class="chat__message-content_message date">
+    <div class="chat__message-content_message_text">19 июня</div>
+  </div>
+
+  <div class="chat__message-content_message user">
+    <div class="chat__message-content_message_image">
+      <img
+        src="https://wallpapers.com/images/hd/north-pole-pictures-3500-x-2135-2vtoslzac8mbno4u.jpg"
+        alt=""
+        srcset=""
+      />
+      <div class="chat__message-content_message_time image">11:56</div>
+    </div>
+  </div>
+
+  <div class="chat__message-content_message my">
+    <div class="chat__message-content_message_image">
+      <img
+        src="https://cs8.livemaster.ru/storage/57/e0/d9468f3fda58bd9335f8fa34752u.jpg"
+        alt=""
+        srcset=""
+      />
+      <div class="chat__message-content_message_time image">11:56</div>
+    </div>
+  </div>
+
+  <div class="chat__message-content_message my">
+    <div class="chat__message-content_message_text">
+      Lorem ipsum dolor sit amet.
+      <div class="chat__message-content_message_time text">11:56</div>
+    </div>
+  </div>
+
+</div>
+<div class="chat__message-form">
+  <form name="chat-message">
+    <div class="chat__message-form_attach"><em class="icon attach"></em></div>
+    <div class="chat__message-form_textarea">
+      <div class="chat__message-form_textarea-inner" data-name="message" contenteditable="true">Сообщение</div>
+    </div>
+    {{ButtonMin "icon:send|additionalСlass:sendMessage"}}
+  </form>
+</div>

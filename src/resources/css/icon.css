@@ -1,0 +1,129 @@
+@import url(./variables.css);
+
+/* иконки */
+.icon {
+  font-family: "GLYPHICONS";
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+  &.eye {
+    &:before {
+      content: "\e105";
+      position: absolute;
+      right: var(--fs13);
+      top: 4px;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs13);
+      cursor: pointer;
+      color: var(--color-grey);
+    }
+
+    &.active {
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      &:before {
+        content: "\e106";
+      }
+    }
+  }
+
+  &.arrow-link-profile {
+    &:before {
+      content: "\e258";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs13);
+      color: var(--color-grey);
+      position: relative;
+      top: 1px;
+    }
+  }margin-top: 9px;
+
+  &.search {
+    &:before {
+      content: "\e003";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs11);
+      color: var(--color-grey);
+      position: relative;
+      top: -4px;
+    }
+  }
+
+  &.menu {
+    &:before {
+      content: "\e235";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs13);
+      color: var(--color-grey);
+    }
+
+    &:hover {
+      &::before {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &.attach {
+    &:before {
+      content: "\e142";
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      font-size: 26px;
+      color: var(--color-grey);
+      margin-top: 4px;
+    }
+
+    &:hover {
+      &::before {
+        color: var(--color-black);
+      }
+    }
+  }
+
+  &.send {
+    &:before {
+      content: "\e092";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs13);
+      color: var(--color-white);
+    }
+  }
+
+  &.back {
+    &:before {
+      content: "\e091";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs13);
+      color: var(--color-white);
+      margin-top: 2px;
+    }
+  }
+
+  &.user-logo {
+    &:before {
+      content: "\e060";
+      display: inline-block;
+      width: var(--fs13);
+      height: var(--fs13);
+      font-size: var(--fs40);
+      color: var(--color-white);
+      
+    }
+  }
+}
