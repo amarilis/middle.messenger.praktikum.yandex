@@ -1,0 +1,35 @@
+:root {
+  --color-blue: #3369f3;
+  --color-blue-hover: #2150c7;
+  --color-blue-light: #e4edfd;
+  --color-grey: #999;
+  --color-grey-light-2: #f8f8f8;
+  --color-grey-light: #efefef;
+  --color-grey-light-transparent: #52525250;
+  --color-black: #1e1e1e;
+  --color-red: #ff2f2f;
+  --color-white: #fff;
+
+  --fs8: 8px;
+  --fs9: 9px;
+  --fs11: 11px;
+  --fs12: 12px;
+  --fs13: 13px;
+  --fs14: 14px;
+  --fs15: 15px;
+  --fs16: 16px;
+  --fs20: 20px;
+  --fs40: 40px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GLYPHICONS";
+  src: url("../fonts/glyphiconshalflings_regular.ttf") format("truetype");
+  font-style: normal;
+}

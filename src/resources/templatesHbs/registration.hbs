@@ -1,0 +1,18 @@
+{{!-- Форма регистрации --}}
+
+<form class="login">
+  <div class="login__title">Создать аккаунт</div>
+  <div class="login__fields">
+    {{Input "label:Почта|name:email|errorLabel:Не корректный адрес"}}
+    {{Input "label:Логин|name:login|errorLabel:Поле должно содержать от 2х до 15ти символов"}}
+    {{Input "label:Имя|name:first_name|errorLabel:Поле должно содержать от 2х до 20ти символов"}}
+    {{Input "label:Фамилия|name:second_name|errorLabel:Поле должно содержать от 2х до 20ти символов"}}
+    {{Input "label:Телефон|name:phone|errorLabel:Телефон должен содержать 11 цифр"}}
+    {{Input "label:Пароль|name:password|type:pass|errorLabel:Пароли не совпадают"}}
+    {{Input "label:Пароль еще раз|type:pass|errorLabel:Пароли не совпадают"}}
+  </div>
+  <div class="login__buttons">
+    {{Button "label:Зарегистрироваться|type:submit|additionalСlass:registr"}}
+    <a href="/login.html" class="login__buttons-link">Войти</a>
+  </div>
+</form>

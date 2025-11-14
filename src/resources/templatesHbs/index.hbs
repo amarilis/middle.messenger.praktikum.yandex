@@ -1,0 +1,39 @@
+{{! Страница чата - начальная страница }}
+
+<div class="chat">
+
+  <div class="chat__list">
+
+    <a href="/profile.html" class="chat__list-link_profile">Профиль
+      <em class="icon arrow-link-profile"></em></a>
+
+    <div class="chat__list-search">
+      <form name="chat-search">
+        <input
+          type="text"
+          autocomplete="off"
+          id="chat__list-search_input"
+          class="chat__list-search_input"
+          placeholder="  "
+          name="search"
+        />
+        <label
+          for="chat__list-search_input"
+          class="chat__list-search_label"
+        >Поиск</label>
+        <button type="submit" class="chat__list-search_button"><em
+            class="icon search"
+          ></em></button>
+      </form>
+    </div>
+
+    <ul class="chat__list-user_chat">
+      {{> chat/user-chat}}
+    </ul>
+  </div>
+
+  <div class="chat__message">
+    {{> chat/message}}
+  </div>
+
+</div>

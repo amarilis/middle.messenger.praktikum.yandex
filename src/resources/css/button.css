@@ -1,0 +1,29 @@
+@import url(./variables.css);
+
+/* обычная кнопка */
+.button {
+  width: 280px;
+  height: 37px;
+  background: var(--color-blue);
+  color: var(--color-white);
+  line-height: 35px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: var(--color-blue-hover);
+  }
+}
+
+/* кружечке со стрелкой */
+.button-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+}

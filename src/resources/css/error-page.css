@@ -1,0 +1,26 @@
+@import url(./variables.css);
+
+/* страница ошибки */
+.error-page {
+  text-align: center;
+  font-weight: 500;
+
+  &__code {
+    font-size: var(--fs40);
+  }
+
+  &__label {
+    font-size: var(--fs20);
+    margin: 20px 0 69px;
+  }
+
+  &__link {
+    font-size: var(--fs11);
+    color: var(--color-blue);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

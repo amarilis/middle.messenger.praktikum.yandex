@@ -1,0 +1,384 @@
+/* чат */
+.chat {
+  width: 100%;
+  display: flex;
+
+  &__list {
+    width: 310px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &-link_profile {
+      color: var(--color-grey);
+      margin: 18px 10px 21px 10px;
+      display: block;
+      text-align: right;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-black);
+
+        & .icon::before {
+          color: var(--color-black);
+        }
+      }
+    }
+
+    &-search {
+      margin: 0 10px 14px 10px;
+      height: 32px;
+      background-color: var(--color-grey-light);
+      border-radius: 5px;
+      position: relative;
+
+      &_button {
+        position: absolute;
+        left: 102px;
+        top: 10px;
+        width: 20px;
+        height: 12px;
+        border: 0;
+      }
+
+      &_input {
+        width: 246px;
+        height: 12px;
+        border: none;
+        position: absolute;
+        left: 34px;
+        top: 9px;
+        color: var(--color-black);
+        font-size: var(--fs12);
+        font-weight: 500;
+        background: transparent;
+
+        &:focus ~ .chat__list-search_button,
+        &:not(:placeholder-shown) ~ .chat__list-search_button {
+          transform: translateX(-92px);
+        }
+
+        &:focus ~ .chat__list-search_label,
+        &:not(:placeholder-shown) ~ .chat__list-search_label {
+          display: none;
+        }
+      }
+
+      &_label {
+        position: absolute;
+        left: 126px;
+        top: 10px;
+        color: var(--color-grey);
+        font-size: var(--fs12);
+        display: block;
+      }
+    }
+
+    &-user_chat,
+    &-user_chat li {
+      list-style: none;
+    }
+
+    &-user_chat {
+      height: calc(100vh - 102px);
+      overflow-y: auto;
+      margin-top: auto;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        padding: 0px;
+      }
+
+      &-li {
+        padding: 2px 0;
+      }
+
+      &-link {
+        padding: 12px 50px 12px 67px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+          background-color: var(--color-blue-light);
+        }
+
+        &::before {
+          content: "";
+          width: 290px;
+          height: 1px;
+          background-color: var(--color-grey-light);
+          position: absolute;
+          left: 10px;
+          top: -2px;
+        }
+
+        &_logo {
+          width: 47px;
+          height: 47px;
+          border-radius: 50%;
+          position: absolute;
+          left: 10px;
+          top: 12px;
+          background-color: var(--color-grey-light);
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        &_name {
+          font-size: var(--fs13);
+          font-weight: 600;
+          color: var(--color-black);
+          width: 193px;
+          white-space: nowrap;
+          overflow: hidden;
+          margin-bottom: 4px;
+        }
+
+        &_last-message {
+          width: 193px;
+          height: 30px;
+          line-height: 15px;
+          font-size: var(--fs12);
+          color: var(--color-grey);
+          display: -webkit-box;
+          max-width: 400px;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &_last-message-time {
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          text-align: right;
+          font-size: var(--fs9);
+          font-weight: 500;
+          color: var(--color-grey);
+        }
+
+        &_unread-messages {
+          position: absolute;
+          right: 10px;
+          bottom: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: var(--color-blue);
+          text-align: center;
+          line-height: 20px;
+          color: var(--color-white);
+          font-size: var(--fs11);
+        }
+      }
+    }
+  }
+
+  &__message {
+    height: 100vh;
+    border-left: 1px solid var(--color-grey-light);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &-entity {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-grey);
+      font-size: var(--fs12);
+      font-weight: 500;
+    }
+
+    &-header {
+      padding: 10px 20px;
+      height: 34px;
+      display: flex;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: var(--color-grey-light);
+        position: absolute;
+        bottom: 0;
+      }
+
+      &_logo {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: var(--color-grey-light);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &_name {
+        padding: 0 10px;
+        font-size: var(--fs13);
+        font-weight: 600;
+        line-height: 35px;
+        flex-grow: 1;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: var(--color-grey-light);
+        position: absolute;
+        bottom: 0;
+      }
+      &_menu {
+        & .icon {
+          width: 20px;
+          display: block;
+          height: 20px;
+          cursor: pointer;
+          margin-top: 8px;
+          text-align: center;
+        }
+      }
+    }
+
+    &-content {
+      overflow-y: auto;
+      padding: 10px 20px;
+      flex-grow: 1;
+
+      &_message {
+        display: flex;
+        padding-bottom: 10px;
+
+        &_time {
+          font-size: var(--fs9);
+          font-weight: 500;
+          color: var(--color-grey);
+          text-align: right;
+          padding-top: 4px;
+        }
+
+        &_text {
+          max-width: 75%;
+          padding: 11px;
+          border-radius: 11px;
+          font-size: var(--fs12);
+          font-weight: 500;
+          position: relative;
+        }
+
+        &.user {
+          justify-content: flex-start;
+
+          & .chat__message-content_message_text {
+            background-color: var(--color-grey-light-2);
+            border-top-left-radius: 0;
+
+            & .chat__message-content_message_time {
+              color: var(--color-grey);
+            }
+          }
+        }
+
+        &.my {
+          justify-content: flex-end;
+
+          & .chat__message-content_message_text {
+            background-color: var(--color-blue-light);
+            border-bottom-right-radius: 0;
+
+            & .chat__message-content_message_time {
+              color: var(--color-blue);
+            }
+          }
+        }
+
+        &_image {
+          max-width: 60%;
+          position: relative;
+          border-radius: 12px;
+          border: 1px solid var(--color-grey-light);
+          background-color: var(--color-white);
+          font-size: 0;
+          overflow: hidden;
+
+          & img {
+            width: 100%;
+          }
+
+          & .chat__message-content_message_time {
+            width: 37px;
+            height: 13px;
+            position: absolute;
+            right: 11px;
+            bottom: 11px;
+            background-color: var(--color-grey-light-transparent);
+            color: var(--color-white);
+            border-radius: 7px;
+            line-height: 11px;
+            text-align: center;
+          }
+        }
+
+        &.date {
+          justify-content: center;
+          color: var(--color-grey);
+        }
+      }
+    }
+
+    &-form {
+      padding: 10px 20px;
+      position: relative;
+
+      & form {
+        display: flex;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: calc(100% - 40px);
+        height: 1px;
+        background-color: var(--color-grey-light);
+        position: absolute;
+        top: 0;
+      }
+
+      &_attach {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+
+      &_textarea {
+        margin: 0 10px;
+        background-color: var(--color-grey-light);
+        border-radius: 16px;
+        padding: 10px 20px;
+        flex-grow: 1;
+
+        &-inner {
+          font-size: var(--fs12);
+          font-weight: 500;
+          line-height: 12px;
+          color: var(--color-grey);
+          min-height: 13px;
+          max-height: 48px;          
+
+          &.scroll {
+            overflow-y: scroll;
+          }
+        }
+      }
+    }
+  }
+}

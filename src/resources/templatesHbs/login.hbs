@@ -1,0 +1,13 @@
+{{!-- Форма логина --}}
+
+<form class="login">
+  <div class="login__title">Вход</div>
+  <div class="login__fields">
+    {{Input "label:Логин|name:login|errorLabel:Неверный логин"}}
+    {{Input "label:Пароль|name:password|type:pass|errorLabel:Неверный пароль"}}
+  </div>
+  <div class="login__buttons">
+    {{Button "label:Вход|type:submit|additionalСlass:auth"}}
+    <a href="/registration.html" class="login__buttons-link">Нет аккаунта?</a>
+  </div>
+</form>
