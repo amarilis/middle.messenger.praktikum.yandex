@@ -7,7 +7,7 @@ export class UserChatList extends Block {
   constructor(props: BlockProps = {}) {
     super(props);
     this.props.events = {
-      load: (e: Event) => {
+      load: (): void => {
         console.log('load');
       },
     };
