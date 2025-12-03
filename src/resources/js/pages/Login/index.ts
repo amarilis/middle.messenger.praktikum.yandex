@@ -102,6 +102,7 @@ export class Login extends Block {
       });
     }
   }
+  
 
   render(): string {
     // Преобразуем компоненты Input и Button в HTML-строки

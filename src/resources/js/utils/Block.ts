@@ -32,7 +32,7 @@ export class Block {
   private _registerEvents(eventBus: EventBus): void {
     eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
-    //eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
+    eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
     eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
   }
 
@@ -46,16 +46,22 @@ export class Block {
 
   componentDidMount(): void {}
 
-  // private _componentDidUpdate(oldProps: BlockProps, newProps: BlockProps): void {
-  //   const response = this.componentDidUpdate(oldProps, newProps);
-  //   if (response) {
-  //     this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
-  //   }
-  // }
+  private _componentDidUpdate(_oldProps: BlockProps, newProps: BlockProps): void {
+    // Не вызываем ререндер до первого монтирования компонента
+    // При инициализации props устанавливаются в конструкторе, но компонент еще не смонтирован
+    if (this._element === null) {
+      return;
+    }
+    
+    const response = this.componentDidUpdate(_oldProps, newProps);
+    if (response) {
+      this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
+    }
+  }
 
-  // componentDidUpdate(oldProps: BlockProps, newProps: BlockProps): boolean {
-  //   return true;
-  // }
+  componentDidUpdate(_oldProps: BlockProps, _newProps: BlockProps): boolean {
+    return true;
+  }
 
   setProps = (nextProps: BlockProps): void => {
     if (!nextProps) {
