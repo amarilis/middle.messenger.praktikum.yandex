@@ -338,10 +338,8 @@
     &-form {
       padding: 10px 20px;
       position: relative;
-
-      & form {
         display: flex;
-      }
+
 
       &::before {
         content: "";

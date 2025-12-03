@@ -1,9 +1,4 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
-import handlebars from "vite-plugin-handlebars";
-import Input from "./src/resources/helpersHbs/Input";
-import Button from "./src/resources/helpersHbs/Button";
-import ButtonMin from "./src/resources/helpersHbs/ButtonMin";
 
 export default defineConfig({
   server: {
@@ -29,14 +24,4 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, "src/resources/templatesHbs"),
-      helpers: {
-        Input,
-        Button,
-        ButtonMin,
-      },
-    }),
-  ],
 });

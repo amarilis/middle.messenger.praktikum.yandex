@@ -12,7 +12,8 @@
   cursor: pointer;
   user-select: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--color-blue-hover);
   }
 }
