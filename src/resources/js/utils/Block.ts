@@ -8,7 +8,7 @@ export type BlockProps = Record<string, any> & {
 export class Block {
   protected eventBus: EventBus;
   public props: BlockProps;
-  private _meta: { props: BlockProps };
+  //private _meta: { props: BlockProps };
   private _element: HTMLElement | null = null;
 
   static EVENTS = {
@@ -21,9 +21,9 @@ export class Block {
   constructor(props: BlockProps = {}) {
     this.eventBus = new EventBus();
     this.props = this._makePropsProxy(props);
-    this._meta = {
-      props,
-    };
+    // this._meta = {
+    //   props,
+    // };
     this._element = null;
     this._registerEvents(this.eventBus);
     this.eventBus.emit(Block.EVENTS.INIT);
@@ -130,17 +130,17 @@ export class Block {
     });
   }
 
-  private _removeEvents(): void {
-    const { events = {} } = this.props;
+  // private _removeEvents(): void {
+  //   const { events = {} } = this.props;
 
-    if (!this._element || !events) {
-      return;
-    }
+  //   if (!this._element || !events) {
+  //     return;
+  //   }
 
-    Object.keys(events).forEach((eventName: string) => {
-      this._element!.removeEventListener(eventName, events[eventName]);
-    });
-  }
+  //   Object.keys(events).forEach((eventName: string) => {
+  //     this._element!.removeEventListener(eventName, events[eventName]);
+  //   });
+  // }
 
   show(): void {
     if (this._element) {
