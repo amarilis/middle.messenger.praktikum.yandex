@@ -10,15 +10,20 @@ interface RenderInnerComponentParams {
 /**
  * Рендерит компонент с внутренними компонентами Block
  * @param params - параметры для рендеринга
- * @returns HTML строка
+ * @returns DocumentFragment с готовым DOM
  */
-export default function renderInnerComponent({ block, props, template }: RenderInnerComponentParams): string {
+export default function renderInnerComponent({ block, props, template }: RenderInnerComponentParams): DocumentFragment {
   const context: Record<string, any> = { ...props };
   
   // Преобразуем все компоненты Block в HTML строки
   Object.keys(context).forEach((key: string) => {
     if (context[key] && context[key] instanceof Block) {
-      context[key] = new Handlebars.SafeString(context[key].render());
+      const rendered = context[key].render();
+      // Если render() вернул DocumentFragment, преобразуем в строку
+      const htmlString = typeof rendered === 'string' 
+        ? rendered 
+        : rendered.textContent || '';
+      context[key] = new Handlebars.SafeString(htmlString);
     }
   });
   

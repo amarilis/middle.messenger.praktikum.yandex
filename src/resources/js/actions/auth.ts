@@ -23,8 +23,12 @@ document.querySelectorAll<HTMLElement>(".buttonSubmit").forEach((btn: HTMLElemen
         password: form.password.value,
       };
 
-      const render = (response: any): void => {
-        if (response === "OK" || response.reason === 'User already in system') {
+      interface AuthResponse {
+        reason?: string;
+      }
+
+      const render = (response: string | AuthResponse): void => {
+        if (response === "OK" || (typeof response === "object" && response.reason === 'User already in system')) {
           window.location.href = "/";
         }
       };

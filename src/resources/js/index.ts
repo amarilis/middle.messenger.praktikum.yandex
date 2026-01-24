@@ -6,34 +6,39 @@ import { Registration } from "./pages/Registration/index";
 import { Errors } from "./pages/Errors/index";
 
 switch (window.location.pathname) {
-  case "/":
+  case "/": {
     const index = new IndexLayout({});
     renderDOM("#root", index);
     break;
+  }
 
   case "/profile.html":
-  case "/profile":
+  case "/profile": {
     const profile = new Profile({});
     renderDOM("#root", profile);
     break;
+  }
 
   case "/login.html":
-  case "/login":
+  case "/login": {
     const login = new Login({});
     renderDOM("#root", login);
     break;
+  }
 
   case "/registration.html":
-  case "/registration":
+  case "/registration": {
     const registration = new Registration({});
     renderDOM("#root", registration);
     break;
+  }
 
-  default:
+  default: {
     const errors = new Errors({
       code: 404,
       label: "Не туда попали",
     });
     renderDOM("#root", errors);
     break;
+  }
 }

@@ -1,7 +1,24 @@
 {
   "extends": "stylelint-config-standard",
   "ignoreFiles": [
-    "src/resources/css/*",
-    "dist/*"
-  ]
+    "**/dist/**",
+    "**/node_modules/**",
+    "**/build/**"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "declaration-block-single-line-max-declarations": null,
+    "selector-pseudo-element-colon-notation": null,
+    "at-rule-empty-line-before": null,
+    "function-url-quotes": null,
+    "font-family-no-missing-generic-family-keyword": null,
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "length-zero-no-unit": null,
+    "font-family-name-quotes": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "alpha-value-notation": null,
+    "custom-property-empty-line-before": null
+  }
 }

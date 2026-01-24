@@ -1,5 +1,5 @@
 import { Block, BlockProps } from "../../utils/Block";
-import template from "../../../templatesHbs/errors.hbs?raw";
+import template from "./template.hbs?raw";
 
 interface ErrorsProps extends BlockProps {
   code?: number;
@@ -11,7 +11,7 @@ export class Errors extends Block {
     super(props);
   }
 
-  render(): string {
+  render() {
     return this.compile(template, this.props);
   }
 }

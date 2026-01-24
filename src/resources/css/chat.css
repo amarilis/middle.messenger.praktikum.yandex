@@ -11,7 +11,7 @@
 
     &-link_profile {
       color: var(--color-grey);
-      margin: 18px 10px 21px 10px;
+      margin: 18px 10px 21px;
       display: block;
       text-align: right;
       text-decoration: none;
@@ -26,7 +26,7 @@
     }
 
     &-search {
-      margin: 0 10px 14px 10px;
+      margin: 0 10px 14px;
       height: 32px;
       background-color: var(--color-grey-light);
       border-radius: 5px;
@@ -85,7 +85,7 @@
       margin-top: auto;
 
       &::-webkit-scrollbar {
-        width: 0;
+        width: 0px;
         padding: 0px;
       }
 
@@ -228,6 +228,7 @@
         line-height: 35px;
         flex-grow: 1;
       }
+
       &::after {
         content: "";
         display: block;
@@ -237,6 +238,7 @@
         position: absolute;
         bottom: 0;
       }
+
       &_menu {
         & .icon {
           width: 20px;

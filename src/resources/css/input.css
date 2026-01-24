@@ -7,8 +7,12 @@
   width: 100%;
   padding-bottom: 50px;
 
-  &.error > .input__error {
+  &.error .input__error {
     display: block;
+  }
+
+  &.error .input__field {
+    border-bottom: 1px solid var(--color-red);
   }
 
   & .input__field {
@@ -21,6 +25,8 @@
     width: 100%;
     font-family: "Inter", sans-serif;
     border-bottom: 1px solid var(--color-blue);
+
+
 
     &:focus ~ .input__placeholder,
     &:not(:placeholder-shown) ~ .input__placeholder {

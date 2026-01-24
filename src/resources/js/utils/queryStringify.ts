@@ -11,7 +11,7 @@ const queryStringify = (data: Record<string, any>): string => {
   let paramStr: string = "?";
 
   for (const key in data) {
-    if (!data.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(data, key)) {
       continue;
     }
 
