@@ -2,17 +2,17 @@
 
 Это сверстанные страницы с использованием шаблонизатора **Handlebars** и сборщика **Vite**. [Макеты](https://www.figma.com/design/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=12-80&t=kvPQyJppf5rei9lm-0) предоставлены Яндексом.
 
-Дополнительно подключена авторизация, получение списка чатов со вставкой данных с сервера, получение данных пользователя и вставка их в профиль пользователя.
+Если пользователь авторизован на сваггере, то в профиле будет отображаться информация.
 
-Для получения данных следует залогинится с уже имеющимися данными для входа
+Проект переписан на typescript EvetBus и классе Block, добавлены проверки форм, данные для отправки на сервер выведены в консоль.
 
 ###### Проект развернут на **Netlify** и его можно посмотреть по ссылкам:
 
-- «[Страница логина](https://practicum222.netlify.app/login.html)»,
-- «[Страница регистрации](https://practicum222.netlify.app/registration.html)»,
-- «[Страница чата](https://practicum222.netlify.app/index.html)»,
-- «[Страница профиля пользователя](https://practicum222.netlify.app/profile.html)»,
-- «[Страница с ошибкой 404](https://practicum222.netlify.app/errors.html)»,
+- «[Страница логина](https://spectacular-biscotti-a8ffc1.netlify.app/login.html)»,
+- «[Страница регистрации](https://spectacular-biscotti-a8ffc1.netlify.app/registration.html)»,
+- «[Страница чата](https://spectacular-biscotti-a8ffc1.netlify.app/index.html)»,
+- «[Страница профиля пользователя](https://spectacular-biscotti-a8ffc1.netlify.app/profile.html)»,
+- «[Страница с ошибкой 404](https://spectacular-biscotti-a8ffc1.netlify.app/errors.html)»,
 - «Страница с ошибкой 5\*\* такая же как и 404. Для ее отображения в шаблоне будут подставляться другие параметры»,
 
 ---
@@ -22,3 +22,5 @@
 - `npm run build` - собирает проект,
 - `npm run start` - устанавливает зависимости и собирает проект,
 - `npm run dev` - запускает проект в режиме разработки.
+- `npm run lint` - запускает проверку js.
+- `npm run stylelint` - запускает проверку css.
